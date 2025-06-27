@@ -28,8 +28,8 @@ Building trading systems for cryptocurrencies. My current JHU deep-learning proj
 ---
 
 **Links**  
-* 📂 [GitHub](https://github.com/josemarquezjaramillo)  
-* 🔗 [LinkedIn](https://www.linkedin.com/in/jose-m%C3%A1rquez-jaramillo-b5920535/)  
-* 📄 [Resume PDF](/assets/resume.pdf)
+* 📂 [GitHub](https://github.com/josemarquezjaramillo){:target="_blank"}
+* 🔗 [LinkedIn](https://www.linkedin.com/in/jose-m%C3%A1rquez-jaramillo-b5920535/){:target="_blank"}
+* 📄 [Resume PDF](/assets/resume.pdf){:target="_blank"}
 
 *This site is under active construction—project write-ups and live dashboards coming soon!*
