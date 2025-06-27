@@ -1,0 +1,9 @@
+title: "José Marquez"
+author: "José Marquez"
+description: "Quantitative Developer – projects & notes"
+url: "https://josemarquez.us"
+baseurl: ""
+theme: minima
+plugins:
+  - jekyll-feed
+permalink: pretty
