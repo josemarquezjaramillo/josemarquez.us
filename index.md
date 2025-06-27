@@ -1,10 +1,8 @@
 ---
 layout: home
-title: "About Me"
+title: About Me
+hide_title: true
 ---
-
-# José Marquez Jaramillo  
-**Quantitative Developer**
 
 Hello and welcome to my website. Feel free to reach out if we share interests or if you’d like to work together.
 
@@ -16,7 +14,7 @@ I build data-intensive applications for financial-services and asset-management 
   * Senior Data Analytics Consultant – Santander Private Banking (led end-to-end Tableau + Python/SQL analytics platform).  
   * Investment Advisor, Product Analyst, and Strategy Analyst – Santander Private Banking.
 
-I’m proficient in data analysis & visualisation, statistical modelling, financial modelling, and quantitative research.
+I’m proficient in data analysis & visualization, statistical modelling, financial modelling, and quantitative research.
 
 ## Educational Background
 * **M.S. Artificial Intelligence** – Johns Hopkins University (*in progress*)  
@@ -25,13 +23,13 @@ I’m proficient in data analysis & visualisation, statistical modelling, financ
 * **B.S. Economics & Finance** – University of Central Florida, 2013  
 
 ## Current Personal Interests
-Building trading systems for cryptocurrencies. My current JHU deep-learning project focuses on constructing optimised crypto portfolios powered by neural-network price-prediction models.
+Building trading systems for cryptocurrencies. My current JHU deep-learning project focuses on constructing optimized crypto portfolios powered by neural-network price-prediction models.
 
 ---
 
 **Links**  
 * 📂 [GitHub](https://github.com/josemarquezjaramillo)  
-* 🔗 [LinkedIn](https://linkedin.com/in/josemarquezjaramillo)  
-* 📄 [Résumé PDF](/assets/resume.pdf)
+* 🔗 [LinkedIn](https://www.linkedin.com/in/jose-m%C3%A1rquez-jaramillo-b5920535/)  
+* 📄 [Resume PDF](/assets/resume.pdf)
 
 *This site is under active construction—project write-ups and live dashboards coming soon!*
