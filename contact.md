@@ -30,7 +30,7 @@ I'm always interested in discussing quantitative finance, machine learning appli
       Email
     </h3>
     <p style="color: #9ca3af; margin-bottom: 1rem;">Best for detailed inquiries or professional opportunities</p>
-    <a href="mailto:contact@josemarquez.us" style="color: #06b6d4; font-weight: 500;">contact@josemarquez.us</a>
+    <a href="mailto:jose@josemarquez.us" style="color: #06b6d4; font-weight: 500;">jose@josemarquez.us</a>
   </div>
 
   <div class="contact-card card">

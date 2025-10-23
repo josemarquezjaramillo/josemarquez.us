@@ -7,14 +7,11 @@ title: About Me
 
 I build data-intensive applications for financial-services and asset-management teams, specializing in quantitative development and advanced analytics.
 
-**Current Role:** **SVP, Optimized Analytics – Citi Wealth Investment Lab**
-Developing back-end solutions for onboarding new investment analytics and redesigning key lab products. Leading technical initiatives that bridge quantitative research and production systems.
+**Current Role:** **SVP, Optimized Analytics – Citi Wealth Investment Lab**: Developing back-end solutions for onboarding new investment analytics and redesigning key lab products. Leading technical initiatives that bridge quantitative research and production systems
 
 **Past Roles:**
-- **Senior Data Analytics Consultant** – Santander Private Banking
-  Led end-to-end analytics platform development using Tableau, Python, and SQL for wealth management insights
-- **Investment Advisor & Product Analyst** – Santander Private Banking
-  Combined client-facing advisory with product strategy and quantitative analysis
+- **Senior Data Analytics Consultant** – Santander Private Banking: Led end-to-end analytics platform development using Tableau, Python, and SQL for wealth management insights
+- **Investment Advisor & Product Analyst** – Santander Private Banking: Combined client-facing advisory with product strategy and quantitative analysis
 
 ### Core Competencies
 
@@ -28,11 +25,9 @@ Developing back-end solutions for onboarding new investment analytics and redesi
 - **M.S. Artificial Intelligence** – Johns Hopkins University (*in progress*)
   Focus: Deep learning, neural networks, and AI applications in quantitative finance
 - **M.S. Computational Finance & Risk Management** – University of Washington, 2021
-  Concentration: Quantitative methods, derivatives pricing, and portfolio theory
 - **M.S. Economics** – Florida Atlantic University, 2015
-  Specialization: Econometrics and applied microeconomics
+  Track: Financial Economics
 - **B.S. Economics & Finance** – University of Central Florida, 2013
-  Honors: Dean's List, Financial modeling excellence
 
 ## Current Research & Interests
 

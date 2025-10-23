@@ -23,7 +23,7 @@ layout: default
 
     {% if site.projects.size > 0 %}
     <div class="projects-grid">
-      {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+      {% assign sorted_projects = site.projects | sort: 'order' %}
       {% for project in sorted_projects %}
       <div class="project-card">
         {% if project.image %}
