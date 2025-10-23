@@ -1,0 +1,293 @@
+// ============================================
+// Base Styles & Modern Reset
+// ============================================
+
+// --- CSS Reset & Modern Defaults ---
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $color-text-primary;
+  background: $color-bg-primary;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// --- Typography ---
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $color-text-primary;
+  margin-bottom: $space-4;
+}
+
+h1 {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-extrabold;
+  letter-spacing: -0.02em;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-5xl;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $font-size-6xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-semibold;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+h5 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+}
+
+h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin-bottom: $space-4;
+  color: $color-text-secondary;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $color-accent-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent-secondary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-primary;
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}
+
+strong, b {
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+em, i {
+  font-style: italic;
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  padding: $space-1 $space-2;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border-subtle;
+  border-radius: $radius-sm;
+  color: $color-accent-secondary;
+}
+
+pre {
+  margin: $space-6 0;
+  padding: $space-4;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border-medium;
+  border-radius: $radius-lg;
+  overflow-x: auto;
+
+  code {
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+  }
+}
+
+blockquote {
+  margin: $space-6 0;
+  padding-left: $space-6;
+  border-left: 4px solid $color-accent-primary;
+  font-style: italic;
+  color: $color-text-secondary;
+}
+
+hr {
+  margin: $space-8 0;
+  border: 0;
+  border-top: 1px solid $color-border-medium;
+}
+
+// --- Lists ---
+ul, ol {
+  margin-bottom: $space-4;
+  padding-left: $space-6;
+  color: $color-text-secondary;
+
+  li {
+    margin-bottom: $space-2;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+// --- Images ---
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $radius-lg;
+}
+
+// --- Tables ---
+table {
+  width: 100%;
+  margin: $space-6 0;
+  border-collapse: collapse;
+  background: $color-bg-elevated;
+  border-radius: $radius-lg;
+  overflow: hidden;
+
+  thead {
+    background: $color-bg-secondary;
+
+    th {
+      padding: $space-4;
+      text-align: left;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+      border-bottom: 1px solid $color-border-medium;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $color-border-subtle;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: $color-bg-hover;
+      }
+    }
+
+    td {
+      padding: $space-4;
+      color: $color-text-secondary;
+    }
+  }
+}
+
+// --- Selection ---
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: $color-text-primary;
+}
+
+::-moz-selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: $color-text-primary;
+}
+
+// --- Scrollbar Styling (Webkit) ---
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-bg-elevated;
+  border-radius: $radius-full;
+
+  &:hover {
+    background: $color-bg-hover;
+  }
+}
+
+// --- Focus Visible (Accessibility) ---
+:focus-visible {
+  outline: 2px solid $color-accent-primary;
+  outline-offset: 2px;
+}
+
+// --- Skip to Content (Accessibility) ---
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: $color-accent-primary;
+  color: $color-text-inverse;
+  padding: $space-3 $space-6;
+  text-decoration: none;
+  border-radius: $radius-md;
+  z-index: $z-tooltip;
+
+  &:focus {
+    top: $space-4;
+    left: $space-4;
+  }
+}

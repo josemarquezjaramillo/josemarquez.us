@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero__container container">
+    <div class="hero__content">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__title">
+        <span class="highlight">{{ site.title }}</span>
+      </h1>
+      <p class="hero__tagline">{{ site.tagline }}</p>
+
+      <div class="hero__cta">
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary btn--lg">
+          View Projects
+        </a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn--secondary btn--lg">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+    <span>Scroll Down</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__image">
+        <img src="{{ '/assets/hero.jpg' | relative_url }}" alt="{{ site.title }}">
+      </div>
+
+      <div class="about__content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Expertise & Skills</h2>
+      <p class="section__subtitle">
+        Specialized in building data-intensive applications for quantitative finance
+      </p>
+    </div>
+
+    <div class="expertise__grid">
+      <div class="expertise__item">
+        <div class="expertise__icon">📊</div>
+        <h3 class="expertise__title">Data Analysis</h3>
+        <p class="expertise__description">
+          Advanced statistical modeling and data visualization using Python, R, and modern analytics platforms.
+        </p>
+      </div>
+
+      <div class="expertise__item">
+        <div class="expertise__icon">💹</div>
+        <h3 class="expertise__title">Financial Modeling</h3>
+        <p class="expertise__description">
+          Quantitative finance, risk management, and computational methods for asset pricing and portfolio optimization.
+        </p>
+      </div>
+
+      <div class="expertise__item">
+        <div class="expertise__icon">🤖</div>
+        <h3 class="expertise__title">Machine Learning</h3>
+        <p class="expertise__description">
+          Deep learning, neural networks, and AI applications for financial forecasting and automated trading systems.
+        </p>
+      </div>
+
+      <div class="expertise__item">
+        <div class="expertise__icon">⚙️</div>
+        <h3 class="expertise__title">Backend Development</h3>
+        <p class="expertise__description">
+          Scalable backend solutions, API design, and database optimization for enterprise applications.
+        </p>
+      </div>
+
+      <div class="expertise__item">
+        <div class="expertise__icon">📈</div>
+        <h3 class="expertise__title">Analytics Platforms</h3>
+        <p class="expertise__description">
+          End-to-end analytics solutions using Tableau, Python, and SQL for business intelligence.
+        </p>
+      </div>
+
+      <div class="expertise__item">
+        <div class="expertise__icon">🔬</div>
+        <h3 class="expertise__title">Research</h3>
+        <p class="expertise__description">
+          Quantitative research, statistical analysis, and academic-grade methodology for financial insights.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

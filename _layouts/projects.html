@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<div class="projects-header">
+  <div class="container">
+    <h1 class="projects-header__title">Projects</h1>
+    <p class="projects-header__description">
+      A collection of my work in quantitative finance, data analytics, and machine learning
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <!-- Project filtering can be added here with JavaScript -->
+    <!-- <div class="projects-filter">
+      <button class="projects-filter__button projects-filter__button--active">All</button>
+      <button class="projects-filter__button">Finance</button>
+      <button class="projects-filter__button">ML/AI</button>
+      <button class="projects-filter__button">Analytics</button>
+    </div> -->
+
+    {% if site.projects.size > 0 %}
+    <div class="projects-grid">
+      {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+      {% for project in sorted_projects %}
+      <div class="project-card">
+        {% if project.image %}
+        <div class="project-card__image">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+          {% if project.featured %}
+          <span class="project-card__badge">Featured</span>
+          {% endif %}
+        </div>
+        {% else %}
+        <div class="project-card__image">
+          <div class="project-card__image-placeholder">📊</div>
+          {% if project.featured %}
+          <span class="project-card__badge">Featured</span>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="project-card__content">
+          <div class="project-card__header">
+            <h3 class="project-card__title">
+              <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+            </h3>
+            {% if project.date %}
+            <div class="project-card__date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              {{ project.date | date: "%B %Y" }}
+            </div>
+            {% endif %}
+          </div>
+
+          <p class="project-card__description">
+            {{ project.excerpt | strip_html | truncatewords: 30 }}
+          </p>
+
+          {% if project.tags %}
+          <div class="project-card__tags">
+            {% for tag in project.tags limit:3 %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="project-card__footer">
+            <a href="{{ project.url | relative_url }}" class="project-card__link">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="projects-empty">
+      <div class="projects-empty__icon">📂</div>
+      <h2 class="projects-empty__title">No Projects Yet</h2>
+      <p class="projects-empty__description">
+        Projects are currently being documented and will be available soon. Check back later!
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</div>

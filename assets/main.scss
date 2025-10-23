@@ -1,26 +1,28 @@
 ---
-# Jekyll front-matter ensures this file is processed
+# Jekyll front matter
 ---
 
-@import "minima";
-@import "colors";
+// ============================================
+// Main SCSS Entry Point
+// Modern Dark Blue Portfolio Theme
+// ============================================
 
-body {
-  background: $bg-dark;
-  color: $text;
-}
+// 1. Variables & Design Tokens
+@import "variables";
 
-a       { color: $brand; }
-a:hover { color: lighten($brand, 15%); }
+// 2. Base Styles & Reset
+@import "base";
 
-.btn-primary {
-  background: $cta;
-  color: #000;
-  &:hover { background: darken($cta, 7%); }
-}
+// 3. Components
+@import "components";
 
-.card {
-  background: $surface;
-  border: 1px solid darken($surface, 5%);
-  box-shadow: 0 2px 6px rgba(#000, .4);
-}
+// 4. Navigation
+@import "navigation";
+
+// 5. Layout Specific Styles
+@import "layouts/home";
+@import "layouts/projects";
+@import "layouts/project-single";
+
+// 6. Utilities
+@import "utilities";

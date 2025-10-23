@@ -1,9 +1,72 @@
+# Site Settings
 title: "Jose Márquez Jaramillo"
-description: "Quantitative Developer"
+tagline: "Quantitative Developer & Data Scientist"
+description: "Portfolio of Jose Márquez Jaramillo - Quantitative Developer specializing in data-intensive applications for financial services and asset management."
 url: "https://josemarquez.us"
 baseurl: ""
-theme: minima
+author:
+  name: "Jose Márquez Jaramillo"
+  email: "contact@josemarquez.us"
+  linkedin: "jose-márquez-jaramillo-b5920535"
+  github: "josemarquezjaramillo"
+
+# Build Settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-feed
-permalink: pretty
-exclude: ["404.html"] 
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE.md
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# SEO and Social
+twitter:
+  username: ""
+  card: summary_large_image
+logo: /assets/images/logo.png
+social:
+  name: Jose Márquez Jaramillo
+  links:
+    - https://github.com/josemarquezjaramillo
+    - https://www.linkedin.com/in/jose-márquez-jaramillo-b5920535/
+
+# Features
+show_excerpts: true
+mathjax: true

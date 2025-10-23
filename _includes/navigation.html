@@ -1,0 +1,86 @@
+<nav class="nav" id="navbar">
+  <div class="nav__container">
+    <a href="{{ '/' | relative_url }}" class="nav__brand">
+      {{ site.title }}
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="nav__menu">
+      <a href="{{ '/' | relative_url }}" class="nav__link {% if page.url == '/' %}nav__link--active{% endif %}">
+        About
+      </a>
+      <a href="{{ '/projects/' | relative_url }}" class="nav__link {% if page.url contains '/projects' %}nav__link--active{% endif %}">
+        Projects
+      </a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav__link {% if page.url == '/contact/' %}nav__link--active{% endif %}">
+        Contact
+      </a>
+      <a href="{{ '/assets/resume.pdf' | relative_url }}" class="nav__link nav__link--cta" target="_blank">
+        Resume
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="navMobile">
+    <a href="{{ '/' | relative_url }}" class="nav__link {% if page.url == '/' %}nav__link--active{% endif %}">
+      About
+    </a>
+    <a href="{{ '/projects/' | relative_url }}" class="nav__link {% if page.url contains '/projects' %}nav__link--active{% endif %}">
+      Projects
+    </a>
+    <a href="{{ '/contact/' | relative_url }}" class="nav__link {% if page.url == '/contact/' %}nav__link--active{% endif %}">
+      Contact
+    </a>
+    <a href="{{ '/assets/resume.pdf' | relative_url }}" class="nav__link" target="_blank">
+      Resume
+    </a>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  (function() {
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    if (navToggle && navMobile) {
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('nav__toggle--open');
+        navMobile.classList.toggle('nav__mobile--open');
+      });
+
+      // Close mobile menu when clicking a link
+      const mobileLinks = navMobile.querySelectorAll('.nav__link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navToggle.classList.remove('nav__toggle--open');
+          navMobile.classList.remove('nav__mobile--open');
+        });
+      });
+    }
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 50) {
+        navbar.classList.add('nav--scrolled');
+      } else {
+        navbar.classList.remove('nav--scrolled');
+      }
+
+      lastScroll = currentScroll;
+    });
+  })();
+</script>
