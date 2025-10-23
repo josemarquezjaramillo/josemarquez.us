@@ -110,7 +110,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: $z-modal;
+    z-index: $z-modal + 1;
+    position: relative;
 
     @media (min-width: $breakpoint-md) {
       display: none;
@@ -149,11 +150,19 @@
     backdrop-filter: blur(20px);
     padding: $space-8 $space-4;
     transform: translateX(100%);
-    transition: transform $transition-slow;
+    transition: transform $transition-slow, visibility 0s $transition-slow;
     overflow-y: auto;
+    z-index: $z-modal;
+    visibility: hidden;
+
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
 
     &--open {
       transform: translateX(0);
+      visibility: visible;
+      transition: transform $transition-slow, visibility 0s 0s;
     }
 
     .nav__link {
