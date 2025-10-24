@@ -1,12 +1,12 @@
 # Site Settings
 title: "Jose Márquez Jaramillo"
-tagline: "Quantitative Developer & Data Scientist"
-description: "Portfolio of Jose Márquez Jaramillo - Quantitative Developer specializing in data-intensive applications for financial services and asset management."
+tagline: "Quantitative Analyst & Developer"
+description: "Portfolio of Jose Márquez Jaramillo - Quantitative Analyst & Developer specializing in data-intensive applications for financial services and asset management."
 url: "https://josemarquez.us"
 baseurl: ""
 author:
   name: "Jose Márquez Jaramillo"
-  email: "contact@josemarquez.us"
+  email: "jose@josemarquez.us"
   linkedin: "jose-márquez-jaramillo-b5920535"
   github: "josemarquezjaramillo"
 
@@ -57,9 +57,9 @@ sass:
   sass_dir: _sass
 
 # SEO and Social
-twitter:
-  username: ""
-  card: summary_large_image
+# twitter:
+#   username: ""
+#   card: summary_large_image
 logo: /assets/images/logo.png
 social:
   name: Jose Márquez Jaramillo
