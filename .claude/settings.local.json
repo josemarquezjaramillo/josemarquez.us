@@ -5,7 +5,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(test:*)",
       "Bash(mkdir:*)",
-      "Bash(bundle exec jekyll build:*)"
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(wsl bash -c \"cat /home/jlmarquez11/crypto-rl-portfolio/WEEK3_PROJECT_UPDATE.md | head -80\")"
     ],
     "deny": [],
     "ask": []

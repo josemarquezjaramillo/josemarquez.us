@@ -111,7 +111,34 @@ layout: default
     </div>
 
     <div class="featured-projects__grid">
-      <!-- Project 1: Kallos System -->
+      <!-- Project 1: RL Portfolio Management -->
+      <article class="project-card">
+        <div class="project-card__image">
+          <img src="{{ '/assets/rl_cumulative_returns.png' | relative_url }}" alt="RL Cryptocurrency Portfolio Management">
+          <div class="project-card__overlay">
+            <span class="project-card__badge">Featured</span>
+          </div>
+        </div>
+        <div class="project-card__content">
+          <h3 class="project-card__title">Reinforcement Learning for Cryptocurrency Portfolio Management</h3>
+          <p class="project-card__description">
+            Deep RL framework comparing DQN, DDQN, and REINFORCE agents against classical optimization for crypto trading with rigorous evaluation methodology.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">Portfolio Optimization</span>
+            <span class="tag">PyTorch</span>
+          </div>
+          <a href="{{ '/projects/crypto-rl-portfolio/' | relative_url }}" class="project-card__link">
+            View Project
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2: Kallos System -->
       <article class="project-card">
         <div class="project-card__image">
           <img src="{{ '/assets/cumret_two_row_comparison.png' | relative_url }}" alt="Kallos GRU Trading System">
@@ -130,34 +157,6 @@ layout: default
             <span class="tag">PyTorch</span>
           </div>
           <a href="{{ '/projects/kallos-gru-trading-system/' | relative_url }}" class="project-card__link">
-            View Project
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Project 2: Portfolio Backtesting -->
-      <article class="project-card">
-        <div class="project-card__image">
-          <div class="project-card__placeholder" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="project-card__content">
-          <h3 class="project-card__title">Portfolio Optimization & Backtesting Framework</h3>
-          <p class="project-card__description">
-            Mean-variance and quadratic utility portfolio construction with comprehensive backtesting and statistical hypothesis testing.
-          </p>
-          <div class="project-card__tags">
-            <span class="tag">Portfolio Theory</span>
-            <span class="tag">Backtesting</span>
-            <span class="tag">Python</span>
-          </div>
-          <a href="{{ '/projects/kallos-portfolios/' | relative_url }}" class="project-card__link">
             View Project
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
