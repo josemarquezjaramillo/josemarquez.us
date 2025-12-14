@@ -259,23 +259,19 @@
 
   // Footer with links
   &__footer {
-    margin-top: $space-16;
-    padding-top: $space-12;
+    margin-top: $space-12;
+    padding: $space-12 0 $space-16;
     border-top: 1px solid $color-border-medium;
-    display: flex;
-    flex-direction: column;
-    gap: $space-6;
-
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
 
     &-links {
       display: flex;
       gap: $space-4;
       flex-wrap: wrap;
+      justify-content: center;
+
+      @media (min-width: $breakpoint-md) {
+        justify-content: flex-start;
+      }
 
       a {
         display: inline-flex;

@@ -145,7 +145,9 @@
     top: $nav-height;
     left: 0;
     right: 0;
-    bottom: 0;
+    // Use dvh (dynamic viewport height) with fallback for mobile browser compatibility
+    height: calc(100vh - #{$nav-height});
+    height: calc(100dvh - #{$nav-height});
     background: rgba(10, 14, 39, 0.98);
     backdrop-filter: blur(20px);
     padding: $space-8 $space-4;
@@ -154,6 +156,8 @@
     overflow-y: auto;
     z-index: $z-modal;
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: $breakpoint-md) {
       display: none;
@@ -170,6 +174,7 @@
       padding: $space-4;
       font-size: $font-size-lg;
       border-bottom: 1px solid $color-border-subtle;
+      flex-shrink: 0;
 
       &:last-child {
         border-bottom: none;
