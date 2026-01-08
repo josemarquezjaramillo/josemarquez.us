@@ -15,7 +15,7 @@
   overflow: hidden;
   padding: $space-16 0;
 
-  // Animated background gradient
+  // Subtle background pattern
   &::before {
     content: '';
     position: absolute;
@@ -25,7 +25,7 @@
     height: 200%;
     background: radial-gradient(
       circle at 20% 50%,
-      rgba(59, 130, 246, 0.15) 0%,
+      rgba(29, 78, 216, 0.04) 0%,
       transparent 50%
     );
     animation: float 20s ease-in-out infinite;
@@ -40,7 +40,7 @@
     height: 200%;
     background: radial-gradient(
       circle at 80% 50%,
-      rgba(6, 182, 212, 0.1) 0%,
+      rgba(14, 116, 144, 0.03) 0%,
       transparent 50%
     );
     animation: float 15s ease-in-out infinite reverse;
@@ -98,16 +98,16 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid rgba(59, 130, 246, 0.3);
+      border: 6px solid $color-border-medium;
       box-shadow:
-        0 0 0 8px rgba(59, 130, 246, 0.1),
-        0 20px 50px rgba(0, 0, 0, 0.4),
-        0 0 80px rgba(59, 130, 246, 0.2);
+        0 0 0 8px rgba(29, 78, 216, 0.06),
+        0 20px 50px rgba(0, 0, 0, 0.1),
+        0 0 80px rgba(29, 78, 216, 0.05);
       transition: all $transition-base;
       animation: fadeIn 1s ease-out;
     }
 
-    // Animated ring effect
+    // Subtle ring effect
     &::before {
       content: '';
       position: absolute;
@@ -116,7 +116,7 @@
       right: -12px;
       bottom: -12px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(6, 182, 212, 0.4));
+      background: linear-gradient(135deg, rgba(29, 78, 216, 0.15), rgba(14, 116, 144, 0.15));
       opacity: 0;
       animation: pulse 3s ease-in-out infinite;
       z-index: -1;
@@ -151,10 +151,6 @@
     color: $color-text-primary;
     margin-bottom: $space-4;
     line-height: $line-height-tight;
-    background: $gradient-accent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     opacity: 0;
     animation: fadeInUp 0.8s ease-out 0.4s forwards;
   }
@@ -245,7 +241,8 @@
   width: 2.5rem;
   height: 2.5rem;
   color: $color-text-tertiary;
-  background: rgba(255, 255, 255, 0.05);
+  background: $color-bg-secondary;
+  border: 1px solid $color-border-medium;
   border-radius: $radius-lg;
   transition: all $transition-base;
 
@@ -255,8 +252,9 @@
   }
 
   &:hover {
-    color: $color-accent-primary;
-    background: rgba(59, 130, 246, 0.15);
+    color: $color-text-inverse;
+    background: $color-accent-primary;
+    border-color: $color-accent-primary;
     transform: translateY(-2px);
   }
 }
@@ -266,8 +264,7 @@
 // ============================================
 
 .credentials {
-  background: rgba(26, 31, 58, 0.5);
-  backdrop-filter: blur(10px);
+  background: $color-bg-secondary;
   border-top: 1px solid $color-border-medium;
   border-bottom: 1px solid $color-border-medium;
   padding: $space-8 0;
@@ -287,12 +284,14 @@
     align-items: center;
     gap: $space-4;
     padding: $space-4;
-    background: rgba(255, 255, 255, 0.02);
+    background: $color-bg-elevated;
+    border: 1px solid $color-border-subtle;
     border-radius: $radius-lg;
     transition: all $transition-base;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.05);
+      border-color: $color-border-medium;
+      box-shadow: $shadow-sm;
       transform: translateY(-2px);
     }
   }
@@ -354,11 +353,12 @@
   border-radius: $radius-2xl;
   overflow: hidden;
   transition: all $transition-base;
+  box-shadow: $shadow-sm;
 
   &:hover {
     border-color: $color-accent-primary;
     transform: translateY(-4px);
-    box-shadow: $shadow-glow;
+    box-shadow: $shadow-md;
 
     .project-card__image img {
       transform: scale(1.05);
@@ -403,14 +403,13 @@
   &__badge {
     display: inline-block;
     padding: $space-2 $space-4;
-    background: rgba(59, 130, 246, 0.9);
-    color: white;
+    background: $color-accent-primary;
+    color: $color-text-inverse;
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
     border-radius: $radius-full;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    backdrop-filter: blur(10px);
   }
 
   &__content {
@@ -511,6 +510,11 @@
 // ============================================
 
 .expertise-refined {
+  // Alternative background modifier
+  &--alt-bg {
+    background: $color-bg-secondary;
+  }
+
   &__grid {
     display: grid;
     gap: $space-8;
@@ -526,17 +530,17 @@
   }
 
   &__item {
-    background: rgba(255, 255, 255, 0.03);
+    background: $color-bg-elevated;
     border: 1px solid $color-border-medium;
     border-radius: $radius-2xl;
     padding: $space-8;
     transition: all $transition-base;
+    box-shadow: $shadow-sm;
 
     &:hover {
       border-color: $color-accent-primary;
       transform: translateY(-4px);
-      box-shadow: $shadow-glow;
-      background: rgba(255, 255, 255, 0.05);
+      box-shadow: $shadow-md;
     }
   }
 
@@ -553,12 +557,45 @@
     .expertise-refined__item:hover & {
       transform: scale(1.1);
     }
+
+    // Color modifiers
+    &--blue {
+      background: rgba($color-accent-primary, 0.1);
+
+      .expertise-refined__icon {
+        color: $color-accent-primary;
+      }
+    }
+
+    &--cyan {
+      background: rgba($color-accent-secondary, 0.1);
+
+      .expertise-refined__icon {
+        color: $color-accent-secondary;
+      }
+    }
+
+    &--violet {
+      background: rgba($color-accent-tertiary, 0.1);
+
+      .expertise-refined__icon {
+        color: $color-accent-tertiary;
+      }
+    }
+
+    &--emerald {
+      background: rgba($color-success, 0.1);
+
+      .expertise-refined__icon {
+        color: $color-success;
+      }
+    }
   }
 
   &__icon {
     width: 2rem;
     height: 2rem;
-    color: $color-accent-primary;
+    color: $color-accent-primary; // Default fallback
   }
 
   &__title {
@@ -611,7 +648,7 @@
 // ============================================
 
 .closing-cta {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  background: $color-bg-secondary;
   border-top: 1px solid $color-border-medium;
   border-bottom: 1px solid $color-border-medium;
 

@@ -55,6 +55,7 @@ h1 {
 h2 {
   font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
+  letter-spacing: -0.015em;
 
   @media (min-width: $breakpoint-md) {
     font-size: $font-size-4xl;
@@ -64,6 +65,7 @@ h2 {
 h3 {
   font-size: $font-size-2xl;
   font-weight: $font-weight-semibold;
+  letter-spacing: -0.01em;
 
   @media (min-width: $breakpoint-md) {
     font-size: $font-size-3xl;
@@ -73,6 +75,7 @@ h3 {
 h4 {
   font-size: $font-size-xl;
   font-weight: $font-weight-semibold;
+  letter-spacing: -0.005em;
 
   @media (min-width: $breakpoint-md) {
     font-size: $font-size-2xl;
@@ -109,10 +112,15 @@ a {
     color: $color-accent-secondary;
   }
 
+  &:visited {
+    color: darken(#1D4ED8, 10%);
+  }
+
   &:focus-visible {
-    outline: 2px solid $color-accent-primary;
+    outline: 3px solid $color-accent-primary;
     outline-offset: 2px;
     border-radius: $radius-sm;
+    box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.15);
   }
 }
 
@@ -129,16 +137,16 @@ code {
   font-family: $font-family-mono;
   font-size: 0.9em;
   padding: $space-1 $space-2;
-  background: $color-bg-elevated;
-  border: 1px solid $color-border-subtle;
+  background: $color-bg-muted;
+  border: 1px solid $color-border-medium;
   border-radius: $radius-sm;
-  color: $color-accent-secondary;
+  color: $color-accent-primary;
 }
 
 pre {
   margin: $space-6 0;
-  padding: $space-4;
-  background: $color-bg-elevated;
+  padding: $space-6;
+  background: $color-bg-muted;
   border: 1px solid $color-border-medium;
   border-radius: $radius-lg;
   overflow-x: auto;
@@ -149,6 +157,7 @@ pre {
     border: none;
     font-size: $font-size-sm;
     line-height: $line-height-relaxed;
+    color: $color-text-primary;
   }
 }
 
@@ -205,6 +214,7 @@ table {
   background: $color-bg-elevated;
   border-radius: $radius-lg;
   overflow: hidden;
+  border: 1px solid $color-border-medium;
 
   thead {
     background: $color-bg-secondary;
@@ -214,7 +224,7 @@ table {
       text-align: left;
       font-weight: $font-weight-semibold;
       color: $color-text-primary;
-      border-bottom: 1px solid $color-border-medium;
+      border-bottom: 2px solid $color-border-medium;
     }
   }
 
@@ -240,12 +250,12 @@ table {
 
 // --- Selection ---
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(29, 78, 216, 0.2);
   color: $color-text-primary;
 }
 
 ::-moz-selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(29, 78, 216, 0.2);
   color: $color-text-primary;
 }
 
@@ -260,18 +270,19 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $color-bg-elevated;
+  background: $color-border-strong;
   border-radius: $radius-full;
 
   &:hover {
-    background: $color-bg-hover;
+    background: $color-text-tertiary;
   }
 }
 
 // --- Focus Visible (Accessibility) ---
 :focus-visible {
-  outline: 2px solid $color-accent-primary;
+  outline: 3px solid $color-accent-primary;
   outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(29, 78, 216, 0.15);
 }
 
 // --- Skip to Content (Accessibility) ---

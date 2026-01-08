@@ -2,18 +2,21 @@
 layout: default
 ---
 
+<!-- Page Header (matching Projects header style) -->
+<div class="page-header">
+  <div class="container">
+    {% unless page.hide_title %}
+    <h1 class="page-header__title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="page-header__description">{{ page.description }}</p>
+    {% endif %}
+    {% endunless %}
+  </div>
+</div>
+
 <div class="page">
   <div class="container container--narrow">
     <article class="page__content">
-      {% unless page.hide_title %}
-      <header class="page__header">
-        <h1 class="page__title">{{ page.title }}</h1>
-        {% if page.description %}
-        <p class="page__description">{{ page.description }}</p>
-        {% endif %}
-      </header>
-      {% endunless %}
-
       <div class="page__body">
         {{ content }}
       </div>
@@ -22,51 +25,66 @@ layout: default
 </div>
 
 <style>
-.page {
-  padding: 8rem 0 4rem;
-  min-height: calc(100vh - 4rem);
-}
-
-.page__header {
+.page-header {
+  padding: 4rem 0 3rem;
   text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
 }
 
-.page__title {
-  font-size: 2.5rem;
+.page-header__title {
+  font-size: 2.25rem;
   font-weight: 800;
-  color: #e5e7eb;
+  color: #0F172A;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.page__description {
+@media (min-width: 768px) {
+  .page-header {
+    padding: 5rem 0 4rem;
+  }
+  .page-header__title {
+    font-size: 3rem;
+  }
+}
+
+.page-header__description {
   font-size: 1.125rem;
-  color: #9ca3af;
-  max-width: 600px;
+  color: #475569;
+  max-width: 700px;
   margin: 0 auto;
+}
+
+.page {
+  padding: 3rem 0 4rem;
+  min-height: calc(100vh - 4rem);
 }
 
 .page__body {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: #9ca3af;
+  color: #475569;
 }
 
 .page__body h2 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #E2E8F0;
+  color: #0F172A;
 }
 
 .page__body h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  color: #0F172A;
+}
+
+.page__body a {
+  color: #1D4ED8;
+}
+
+.page__body a:hover {
+  color: #0E7490;
 }
 </style>

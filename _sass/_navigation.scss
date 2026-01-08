@@ -8,14 +8,14 @@
   left: 0;
   right: 0;
   height: $nav-height;
-  background: rgba(10, 14, 39, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid $color-border-subtle;
+  border-bottom: 1px solid $color-border-medium;
   z-index: $z-fixed;
   transition: all $transition-base;
 
   &--scrolled {
-    background: rgba(10, 14, 39, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     box-shadow: $shadow-lg;
   }
 
@@ -68,8 +68,8 @@
     position: relative;
 
     &:hover {
-      color: $color-text-primary;
-      background: rgba(59, 130, 246, 0.1);
+      color: $color-accent-primary;
+      background: rgba(29, 78, 216, 0.08);
     }
 
     &--active {
@@ -92,9 +92,14 @@
       background: $color-accent-primary;
       color: $color-text-inverse;
 
+      &, &:visited, &:link {
+        color: $color-text-inverse;
+      }
+
       &:hover {
-        background: lighten($color-accent-primary, 10%);
+        background: darken(#1D4ED8, 8%);
         box-shadow: $shadow-glow;
+        color: $color-text-inverse;
       }
     }
   }
@@ -148,7 +153,7 @@
     // Use dvh (dynamic viewport height) with fallback for mobile browser compatibility
     height: calc(100vh - #{$nav-height});
     height: calc(100dvh - #{$nav-height});
-    background: rgba(10, 14, 39, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     padding: $space-8 $space-4;
     transform: translateX(100%);
@@ -173,7 +178,7 @@
       display: block;
       padding: $space-4;
       font-size: $font-size-lg;
-      border-bottom: 1px solid $color-border-subtle;
+      border-bottom: 1px solid $color-border-medium;
       flex-shrink: 0;
 
       &:last-child {

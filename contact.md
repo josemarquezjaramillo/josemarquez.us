@@ -49,19 +49,19 @@ I'm open to discussing quantitative finance, machine learning applications in tr
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 0.5rem;
-  color: #e5e7eb;
+  color: #475569;
   text-decoration: none;
   font-weight: 500;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: #3b82f6;
-  color: #3b82f6;
+  background: #1D4ED8;
+  border-color: #1D4ED8;
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 

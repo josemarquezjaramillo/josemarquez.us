@@ -4,7 +4,8 @@
 
 .project-single {
   &__header {
-    background: $gradient-hero;
+    background: $color-bg-secondary;
+    border-bottom: 1px solid $color-border-medium;
     padding: $space-16 0 $space-12;
 
     @media (min-width: $breakpoint-md) {
@@ -60,7 +61,7 @@
     margin: $space-12 0;
     border-radius: $radius-2xl;
     overflow: hidden;
-    box-shadow: $shadow-2xl;
+    box-shadow: $shadow-lg;
     border: 1px solid $color-border-medium;
 
     img {
@@ -152,7 +153,7 @@
   &__embed {
     margin: $space-12 0;
     padding: $space-8;
-    background: $color-bg-elevated;
+    background: $color-bg-secondary;
     border: 1px solid $color-border-medium;
     border-radius: $radius-xl;
 
@@ -169,7 +170,7 @@
         content: '';
         width: 4px;
         height: 1.5rem;
-        background: $gradient-accent;
+        background: $color-accent-primary;
         border-radius: $radius-full;
       }
     }
@@ -177,13 +178,14 @@
     // Chart/Graph container
     &--chart {
       .chart-container {
-        background: $color-bg-secondary;
+        background: $color-bg-elevated;
         padding: $space-6;
         border-radius: $radius-lg;
         min-height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid $color-border-subtle;
       }
     }
 
@@ -278,7 +280,7 @@
         align-items: center;
         gap: $space-2;
         padding: $space-3 $space-5;
-        background: $color-bg-elevated;
+        background: $color-bg-secondary;
         border: 1px solid $color-border-medium;
         border-radius: $radius-lg;
         color: $color-text-secondary;
@@ -290,7 +292,7 @@
           background: $color-accent-primary;
           border-color: $color-accent-primary;
           color: $color-text-inverse;
-          box-shadow: $shadow-glow;
+          box-shadow: $shadow-md;
         }
 
         svg {

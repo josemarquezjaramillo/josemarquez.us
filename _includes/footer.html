@@ -74,23 +74,25 @@
 
 <style>
 .footer {
-  background: $color-bg-secondary;
-  border-top: 1px solid $color-border-medium;
-  padding: $space-16 0 $space-8;
-  margin-top: $space-20;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
 }
 
 .footer__content {
   display: flex;
   flex-direction: column;
-  gap: $space-12;
+  gap: 3rem;
 }
 
 .footer__main {
   display: grid;
-  gap: $space-12;
+  gap: 3rem;
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .footer__main {
     grid-template-columns: 1fr 2fr;
   }
 }
@@ -98,25 +100,25 @@
 .footer__brand h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #e5e7eb;
+  color: #0F172A;
   margin-bottom: 0.75rem;
 }
 
 .footer__brand p {
-  color: #9ca3af;
+  color: #475569;
   font-size: 0.875rem;
 }
 
 .footer__links {
   display: grid;
-  gap: $space-8;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .footer__section h4 {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #e5e7eb;
+  color: #0F172A;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -133,33 +135,47 @@
 }
 
 .footer__section ul li a {
-  color: #9ca3af;
+  color: #475569;
   font-size: 0.875rem;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer__section ul li a:hover {
-  color: #3b82f6;
+  color: #1D4ED8;
 }
 
 .footer__bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $space-4;
-  padding-top: $space-8;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E2E8F0;
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .footer__bottom {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .footer__bottom p {
-  color: #6b7280;
+  color: #94A3B8;
   font-size: 0.875rem;
   margin: 0;
+}
+
+.footer .social-links a {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+}
+
+.footer .social-links a:hover {
+  background: #1D4ED8;
+  border-color: #1D4ED8;
+  color: #FFFFFF;
 }
 </style>
